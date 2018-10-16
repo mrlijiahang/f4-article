@@ -7,7 +7,7 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_cb_f4_top77';
 
   // add your config here
-  config.middleware = [];
+  config.middleware = [ 'errorHandler' ];
 
   return config;
 };
