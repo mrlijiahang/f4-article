@@ -17,16 +17,31 @@ class UserController extends Controller {
 
   async index() {
     const { ctx } = this;
-    ctx.helper.success(ctx, 'index');
+    const payload = ctx.query;
+    const res = await ctx.service.user.index(payload);
+    ctx.helper.success(ctx, res);
   }
 
-  /**
-   * 创建用户
-   */
+  async show() {
+    const { ctx } = this;
+    const payload = ctx.query;
+    const res = await ctx.service.user.show(payload);
+    ctx.helper.success(ctx, res);
+  }
+
+  async update() {
+    const { ctx } = this;
+    const payload = ctx.query;
+    const res = await ctx.service.user.update(payload);
+    ctx.helper.success(ctx, res);
+  }
+
   async create() {
     const { ctx } = this;
     ctx.validate(this.UserCreateRules);
-    ctx.helper.success(ctx, 'create');
+    const payload = ctx.body;
+    const res = await ctx.service.user.create(payload);
+    ctx.helper.success(ctx, res);
   }
 }
 
