@@ -43,6 +43,11 @@ class UserController extends Controller {
     const res = await ctx.service.user.create(payload);
     ctx.helper.success(ctx, res);
   }
+
+  async remove(payload) {
+    const { ctx } = this;
+    await ctx.service.user.remove(payload);
+  }
 }
 
 module.exports = UserController;

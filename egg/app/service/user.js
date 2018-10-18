@@ -10,6 +10,9 @@ class UserService extends Service() {
   async create(payload) {
     console.log(payload);
   }
+  async remove(payload) {
+    console.log(payload);
+  }
 }
 
 module.exports = UserService;
