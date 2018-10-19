@@ -2,15 +2,29 @@
 
 const Service = require('egg').Service;
 
-class UserService extends Service() {
+class UserService extends Service {
 
   async index(payload) {
     console.log(payload);
   }
+
+  async show(payload) {
+    console.log(payload);
+  }
+
   async create(payload) {
     console.log(payload);
   }
-  async remove(payload) {
+
+  async removes(payload) {
+    console.log(payload);
+  }
+
+  async update(payload) {
+    console.log(payload);
+  }
+
+  async destory(payload) {
     console.log(payload);
   }
 }

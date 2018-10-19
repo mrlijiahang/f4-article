@@ -44,9 +44,14 @@ class UserController extends Controller {
     ctx.helper.success(ctx, res);
   }
 
-  async remove(payload) {
+  async destory(payload) {
     const { ctx } = this;
-    await ctx.service.user.remove(payload);
+    await ctx.service.user.destory(payload);
+  }
+
+  async removes(payload) {
+    const { ctx } = this;
+    await ctx.service.user.removes(payload);
   }
 }
 
