@@ -9,5 +9,10 @@ module.exports = appInfo => {
   // add your config here
   config.middleware = [ 'errorHandler' ];
 
+  config.mongoose = {
+    url: 'mongodb://127.0.0.1/article',
+    options: {},
+  };
+
   return config;
 };
