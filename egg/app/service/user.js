@@ -4,6 +4,10 @@ const Service = require('egg').Service;
 
 class UserService extends Service {
 
+  async create(payload) {
+    return this.ctx.model.User.create(payload);
+  }
+
   async index(payload) {
     console.log(payload);
   }
@@ -12,9 +16,6 @@ class UserService extends Service {
     console.log(payload);
   }
 
-  async create(payload) {
-    console.log(payload);
-  }
 
   async removes(payload) {
     console.log(payload);
