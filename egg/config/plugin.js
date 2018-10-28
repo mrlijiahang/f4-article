@@ -10,6 +10,11 @@ exports.validate = {
   package: 'egg-validate',
 };
 
+exports.bcrypt = {
+  enable: true,
+  package: 'egg-bcrypt',
+};
+
 // had enabled by egg
 // exports.static = true;
 

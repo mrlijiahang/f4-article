@@ -14,5 +14,9 @@ module.exports = appInfo => {
     options: {},
   };
 
+  config.bcrypt = {
+    saltRounds: 10, // default 10
+  };
+
   return config;
 };
