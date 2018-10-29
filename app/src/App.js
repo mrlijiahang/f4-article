@@ -22,7 +22,7 @@ class App extends Component {
             <Button type="primary">F</Button>
           </Col>
           <Col span="6">
-            <Button type="primary">4</Button>
+            <Button type="primary">4111</Button>
           </Col>
         </Row>
         
